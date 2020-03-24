@@ -2,4 +2,25 @@
 @using ContentModels = Umbraco.Web.PublishedModels;
 @{
 	Layout = "master.cshtml";
+	var cards = Model.Card.OfType<Card>();
 }
+
+<section style="margin-top:5%;">
+    <div class="w-100 h-25" style="background-color: aqua;">
+        <h1>hje</h1>
+	</div>
+</section>
+
+<section  style="margin-top:5%;"   class=" d-flex flex-wrap">
+	@foreach (var card in cards)
+	{
+		<div class="p-1 m-2 card flex-fill">
+			<img class="card-img-top" src="@card.CardImage.Url" alt="Alternate Text" />
+			<div class="card-body">
+				<h5 class="card-title">@card.CardTitle</h5>
+				<p class="card-text">@card.CardText</p>
+				@*<a href="#" class="btn btn-primary">Go somewhere</a>*@
+			</div>
+		</div>	
+	}
+</section>
