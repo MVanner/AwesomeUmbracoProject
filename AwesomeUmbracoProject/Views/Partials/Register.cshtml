@@ -53,7 +53,7 @@ else
 {
     using (Html.BeginUmbracoForm<UmbRegisterController>("HandleRegisterMember"))
     {
-        <fieldset>
+        <fieldset class="signinwith">
             <legend>Register Member</legend>
 
             @Html.ValidationSummary("registerModel", true)
@@ -61,17 +61,17 @@ else
             @Html.LabelFor(m => registerModel.Name)
             @Html.TextBoxFor(m => registerModel.Name)
             @Html.ValidationMessageFor(m => registerModel.Name)
-            <br />
+            
 
             @Html.LabelFor(m => registerModel.Email)
             @Html.TextBoxFor(m => registerModel.Email)
             @Html.ValidationMessageFor(m => registerModel.Email)
-            <br />
+           
 
             @Html.LabelFor(m => registerModel.Password)
             @Html.PasswordFor(m => registerModel.Password)
             @Html.ValidationMessageFor(m => registerModel.Password)
-            <br />
+           
 
             @if (registerModel.MemberProperties != null)
             {
@@ -90,7 +90,7 @@ else
                     *@
                     @Html.EditorFor(m => registerModel.MemberProperties[i].Value)
                     @Html.HiddenFor(m => registerModel.MemberProperties[i].Alias)
-                    <br />
+                    
                 }
             }
 
@@ -98,7 +98,7 @@ else
             @Html.HiddenFor(m => registerModel.RedirectUrl)
             @Html.HiddenFor(m => registerModel.UsernameIsEmail)
 
-            <button>Register</button>
+            <button class="social">Register</button>
         </fieldset>
     }
 }

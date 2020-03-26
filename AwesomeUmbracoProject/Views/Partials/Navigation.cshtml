@@ -46,7 +46,7 @@
                     {
                         Members.Logout();
                         <li class="nav-item">
-                            <a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null) text-white" href="@HomePage.Url">Logout</a>
+                            <a class="nav-link @(item.IsAncestorOrSelf(Model) ? "nav-link--active" : null) text-white" href="@HomePage.Url">Logout @loginStatusModel.Username</a>
                         </li>
                     }
                     else

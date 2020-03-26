@@ -23,7 +23,7 @@
 @using (Html.BeginUmbracoForm<UmbLoginController>("HandleLogin"))
 {
     @Html.HiddenFor(m => loginModel.RedirectUrl)
-    <fieldset>
+    <fieldset class="signinwith">
         <legend>Login</legend>
 
         @Html.ValidationSummary("loginModel", true)
@@ -31,13 +31,13 @@
         @Html.LabelFor(m => loginModel.Username)
         @Html.TextBoxFor(m => loginModel.Username)
         @Html.ValidationMessageFor(m => loginModel.Username)
-        <br />
+        
 
         @Html.LabelFor(m => loginModel.Password)
         @Html.PasswordFor(m => loginModel.Password)
         @Html.ValidationMessageFor(m => loginModel.Password)
-        <br />
+        
 
-        <button>Login</button>
+        <button class="social">Login</button>
     </fieldset>
 }

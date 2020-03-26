@@ -5,17 +5,37 @@
 	var cards = Model.Card.OfType<Card>();
 }
 
-<section style="margin-top:5%;">
-    <div class="w-100 h-25" style="background-color: aqua;">
-        <h1>hje</h1>
-	</div>
-</section>
+	<section style="margin-top:5%;" class=" d-flex flex-wrap ">
+		<div class="container mx-auto row MyList">
+			<div class="p-1 m-2 flex-fill">
+				<ul>
+					<li><h5 href="#">C#</h5></li>
+					<li><h5 href="#">Python</h5></li>
+					<li><h5 href="#">Swift</h5></li>
+				</ul>
+			</div>
+			<div class="p-1 m-2 flex-fill">
+				<ul>
+					<li><h5 href="#">HTML</h5></li>
+					<li><h5 href="#">CSS</h5></li>
+					<li><h5 href="#">Java Script</h5></li>
+				</ul>
+			</div>
+			<div class="p-1 m-2 flex-fill">
+				<ul>
+					<li><h5 href="#">ASP.net</h5></li>
+					<li><h5 href="#">Umbraco</h5></li>
+					<li><h5 href="#">LUA</h5></li>
+				</ul>
+			</div>
+		</div>
+	</section>
 
 <section  style="margin-top:5%;"   class=" d-flex flex-wrap">
 	@foreach (var card in cards)
 	{
 		<div class="p-1 m-2 card flex-fill">
-			<img class="card-img-top" src="@card.CardImage.Url" alt="Alternate Text" />
+			<img class="card-img-top"  src="@card.CardImage.Url" alt="Alternate Text" />
 			<div class="card-body">
 				<h5 class="card-title">@card.CardTitle</h5>
 				<p class="card-text">@card.CardText</p>
@@ -24,3 +44,4 @@
 		</div>	
 	}
 </section>
+
